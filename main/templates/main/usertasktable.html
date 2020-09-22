@@ -3,9 +3,9 @@
         <tr>
             <th scope="col">Task Name</th>
             <th scope="col">Task Deadline</th>
-            <th scope="col">Task Notes</th>
+            <th class="hideOnMobile" scope="col">Task Notes</th>
             <th scope="col">Importance</th>
-            <th scope="col"></th>
+            <th class="hideOnTab" scope="col"></th>
         </tr>
     </thead>
     <tbody>
@@ -13,9 +13,9 @@
         <tr>
             <td>{{i.task}}</td>
             <td>{{i.deadline}}</td>
-            <td>{{i.notes}}</td>
+            <td class="hideOnMobile">{{i.notes}}</td>
             <td>{{i.importance}}</td>
-            <td><a class="btn btn-primary btn-sm" href="task/delete/{{i.id}}/">Delete</a></td>
+            <td class="hideOnTab"><a class="btn btn-primary btn-sm" href="task/delete/{{i.id}}/">Delete</a></td>
         </tr>
         {% endfor %}
     </tbody>

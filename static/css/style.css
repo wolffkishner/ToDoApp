@@ -10,9 +10,9 @@
             font-family: 'Roboto';
             font-weight: 400;
         }
-
+        
         h1 {
-            font-size: 56px;
+            font-size: 50px;
         }
 
         h2 {
@@ -67,12 +67,7 @@
         }
 
         .showNav {
-            display: block;
-            transition: 0.3s;
-            text-align: center !important;
-            width: 100% !important;
-            right: 100%;
-            visibility: visible !important;
+            display: inherit;
         }
 
         .navListWrapper {
@@ -165,7 +160,7 @@
 
         @media (max-width: 768px) {
             h1 {
-                font-size: 40px;
+                font-size: 38px;
             }
 
             h2 {
@@ -231,8 +226,21 @@
                 padding: 10px 0px;
             }
 
+            .showNav {
+                display: block !important;
+                transition: 0.3s !important;
+                text-align: center !important;
+                width: 100% !important;
+                right: 100% !important;
+                visibility: visible !important;
+            }
+
             .table {
-                overflow: auto;
+                overflow-x: auto;
+            }
+
+            .table .hideOnTab {
+                display: none !important;
             }
 
             #body {
@@ -244,5 +252,11 @@
 
             .ui-datepicker {
                 width: 15em !important;
+            }
+        }
+
+        @media (max-width: 496px) {
+            .table .hideOnMobile {
+                display: none;
             }
         }
