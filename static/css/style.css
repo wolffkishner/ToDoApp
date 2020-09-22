@@ -1,0 +1,80 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: rgb(243, 245, 244);
+}
+
+.box {
+    display: relative;
+    padding: 2.5rem;
+    background: rgba(0, 0, 0, 0.356) !important;
+    border-radius: 10px;
+    box-shadow: 3px 3px 9px rgba(20, 30, 41, 0.596);
+}
+
+#formHeading {
+    font-size: 62.5%;
+    font-family: 'Poppins';
+    font-weight: bold;
+    color: #ebebebfb;
+    text-shadow: 2px 2px 0px #ff0000;
+    font-size: 26px;
+    letter-spacing: 0.08rem;
+}
+
+#formSubmit {
+    font-family: 'Poppins';
+    font-weight: bold;
+    color: #ebebebfb;
+    text-shadow: 2px 2px 0px #ff0000;
+    font-size: 20px;
+    letter-spacing: 0.08rem;
+}
+
+
+.mobileShow {
+    display: none !important;
+}
+
+.btn {
+    border-radius: 6px !important;
+    padding: 1px 15px !important;
+}
+
+@media (max-width: 992px) {
+    #formHeading {
+        font-size: 130%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .mobileShow {
+        display: inherit !important;
+    }
+
+    #mb-sm {
+        margin-bottom: 10px;
+    }
+
+    #formHeading {
+        text-align: center;
+        font-size: 120%;
+    }
+
+    .btn {
+        margin-top: 15px;
+        width: 100%;
+        padding-top: 3px !important;
+        padding-bottom: 3px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .box {
+        border-radius: 0;
+    }
+}

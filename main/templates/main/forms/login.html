@@ -1,0 +1,26 @@
+{% extends 'main/index.html' %}{% block content %}
+<div class="loginPage">
+    <div class="container" id="loginForm">
+        <div class="col-md-9 mx-auto my-auto">
+            <h1 class="formHeading mx-auto gy-2">Login</h1>
+            <form action="" method="post">{% csrf_token %}
+                <div class="gy-2">
+                    <input type="text" name="username" id="usernameField" class="form-control my-4"
+                        placeholder="Username">
+                    <input type="password" name="password" id="passwordField" class="form-control my-4"
+                        placeholder="Password">
+                    <div class="col-md-8 mx-auto">
+                        <input type="submit" value="Submit" class="btn btn-block btn-primary my-4">
+                    </div>
+                </div>
+            </form>
+            <span class="col-md-8 mx-auto" class="loginRegisterInterlink">
+                <p class="mx-auto loginRegisterInterlink">Don't have an account?<a href="{% url 'register' %}"
+                        class="primary">
+                        Register Now</a>
+                </p>
+            </span>
+        </div>
+    </div>
+</div>
+{% endblock %}

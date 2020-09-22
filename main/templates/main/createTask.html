@@ -1,0 +1,14 @@
+{% extends 'main/index.html' %}{% load widget_tweaks %}{% block content %}
+<h2 class="heading py-3">Create Task</h1>
+    <div class="col-md-8 mx-auto">
+        <form action="" method="post"> {% csrf_token %}
+            {% render_field createTaskForm.task class="form-control my-3" placeholder="Task" %}
+            {% render_field createTaskForm.deadline class="form-control my-3" placeholder="Task Deadline" autocomplete="off" id="datePicker" %}
+            {% render_field createTaskForm.notes class="form-control my-3" placeholder="Task Notes" %}
+            {% render_field createTaskForm.importance class="form-control my-3" placeholder="Importance" %}
+            <div class="col-md-8 mx-auto mb-3">
+                <input type="submit" value="Submit" class="btn btn-primary btn-block mx-auto">
+            </div>
+        </form>
+    </div>
+    {% endblock %}
