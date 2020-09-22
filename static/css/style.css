@@ -1,80 +1,248 @@
-* {
-    padding: 0;
-    margin: 0;
-}
+        *,
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
 
-body {
-    background: rgb(243, 245, 244);
-}
+        body {
+            transition: 1s;
+            font-family: 'Roboto';
+            font-weight: 400;
+        }
 
-.box {
-    display: relative;
-    padding: 2.5rem;
-    background: rgba(0, 0, 0, 0.356) !important;
-    border-radius: 10px;
-    box-shadow: 3px 3px 9px rgba(20, 30, 41, 0.596);
-}
+        h1 {
+            font-size: 56px;
+        }
 
-#formHeading {
-    font-size: 62.5%;
-    font-family: 'Poppins';
-    font-weight: bold;
-    color: #ebebebfb;
-    text-shadow: 2px 2px 0px #ff0000;
-    font-size: 26px;
-    letter-spacing: 0.08rem;
-}
+        h2 {
+            font-size: 42px;
+        }
 
-#formSubmit {
-    font-family: 'Poppins';
-    font-weight: bold;
-    color: #ebebebfb;
-    text-shadow: 2px 2px 0px #ff0000;
-    font-size: 20px;
-    letter-spacing: 0.08rem;
-}
+        h3 {
+            font-size: 28px;
+        }
 
+        h4 {
+            font-size: 24px;
+        }
 
-.mobileShow {
-    display: none !important;
-}
+        h5 {
+            font-size: 20px;
+        }
 
-.btn {
-    border-radius: 6px !important;
-    padding: 1px 15px !important;
-}
+        h6 {
+            font-size: 16px;
+        }
 
-@media (max-width: 992px) {
-    #formHeading {
-        font-size: 130%;
-    }
-}
+        .sidenav {
+            display: block;
+            right: 0;
+            transition: 0.5s;
+            height: 100%;
+            width: 160px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
 
-@media (max-width: 768px) {
+        .sidenav a {
+            padding: 6px 12px;
+            text-align: center !important;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            margin: 15px 0px !important;
+            transition: 0.5s;
+        }
 
-    .mobileShow {
-        display: inherit !important;
-    }
+        .sidenav a:hover {
+            transition: 0.5s;
+            color: #f1f1f1;
+        }
 
-    #mb-sm {
-        margin-bottom: 10px;
-    }
+        .showNav {
+            display: block;
+            transition: 0.3s;
+            text-align: center !important;
+            width: 100% !important;
+            right: 100%;
+            visibility: visible !important;
+        }
 
-    #formHeading {
-        text-align: center;
-        font-size: 120%;
-    }
+        .navListWrapper {
+            bottom: 0px !important;
+        }
 
-    .btn {
-        margin-top: 15px;
-        width: 100%;
-        padding-top: 3px !important;
-        padding-bottom: 3px !important;
-    }
-}
+        .navToggle {
+            display: none;
+        }
 
-@media (max-width: 576px) {
-    .box {
-        border-radius: 0;
-    }
-}
+        .navToggle:focus {
+            color: white;
+            box-shadow: none;
+        }
+
+        .navToggle:hover {
+            color: white;
+            box-shadow: none;
+        }
+
+        #body {
+            margin-left: 160px;
+            /* Same as the width of the sidenav */
+            padding: 0px 10px;
+        }
+
+        .sideNavActive {
+            transition: 1;
+            opacity: 0.7;
+        }
+
+        .loginPage {
+            position: relative;
+            min-height: 95vh;
+        }
+
+        #loginForm .formHeading {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            color: rgb(23, 62, 88);
+            text-shadow: 2px 2px 1px #ff0808;
+        }
+
+        .registerPage {
+            position: relative;
+            min-height: 95vh;
+        }
+
+        #registerForm .formHeading {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            color: rgb(23, 62, 88);
+            text-shadow: 2px 2px 1px #ff0808;
+        }
+
+        .heading {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            color: rgb(23, 62, 88);
+            text-shadow: 2px 2px 1px #ff0808;
+        }
+
+        .loginRegisterInterlink {
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #delete .deleteWarning {
+            position: relative;
+            text-align: center;
+            font-size: 17px;
+            letter-spacing: 0.2px;
+            color: white !important;
+        }
+
+        #delete .card {
+            border-radius: 11px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 40px;
+            }
+
+            h2 {
+                font-size: 32px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+
+            h4 {
+                font-size: 20px;
+            }
+
+            h5 {
+                font-size: 16px;
+            }
+
+            h6 {
+                font-size: 12px;
+            }
+
+            .sidenav {
+                display: block;
+                right: 0;
+                transition: 0.5s;
+                height: 100%;
+                width: 0px;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: #111;
+                overflow-x: hidden;
+                padding-top: 20px;
+            }
+
+            .navToggle {
+                display: box;
+                text-emphasis: none;
+                font-size: 24px;
+                justify-content: space-evenly;
+                padding: 12px 0px;
+                text-align: center;
+                display: flex;
+                align-items: flex-end;
+                overflow: hidden;
+                z-index: 999 !important;
+                position: fixed;
+                width: 50px;
+                height: 50px;
+                background-color: #C82333;
+                color: white;
+                position: fixed;
+                right: 0;
+                box-shadow: none;
+                border-radius: 0;
+                visibility: visible;
+            }
+
+            .navToggleActive {
+                font-size: 28px;
+                padding: 10px 0px;
+            }
+
+            .table {
+                overflow: auto;
+            }
+
+            #body {
+                margin-left: 0px !important;
+                margin: 0px 4px !important;
+                /* Same as the width of the sidenav */
+                padding: 0px 0px !important;
+            }
+
+            .ui-datepicker {
+                width: 15em !important;
+            }
+        }
