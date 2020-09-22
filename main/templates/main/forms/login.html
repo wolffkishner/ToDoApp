@@ -19,6 +19,11 @@
                         class="primary">
                         Register Now</a>
                 </p>
+                {% for i in messages %}
+                <div class="alert alert-warning mx-auto" role="alert">
+                    {{i}}
+                </div>
+                {% endfor %}
             </span>
         </div>
     </div>

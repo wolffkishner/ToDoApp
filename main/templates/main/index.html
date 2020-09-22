@@ -164,6 +164,18 @@
             text-align: center;
         }
 
+        #delete .deleteWarning {
+            position: relative;
+            text-align: center;
+            font-size: 17px;
+            letter-spacing: 0.2px;
+            color: white !important;
+        }
+
+        #delete .card {
+            border-radius: 11px;
+        }
+
         @media screen and (max-height: 450px) {
             .sidenav {
                 padding-top: 15px;
@@ -239,8 +251,7 @@
             }
 
             .table {
-                overflow-x: auto;
-                border-collapse: collapse;
+                overflow: auto;
             }
 
             #body {
@@ -248,6 +259,10 @@
                 margin: 0px 4px !important;
                 /* Same as the width of the sidenav */
                 padding: 0px 0px !important;
+            }
+
+            .ui-datepicker {
+                width: 15em !important;
             }
         }
     </style>

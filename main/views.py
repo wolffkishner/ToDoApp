@@ -2,7 +2,7 @@ from django.shortcuts import *
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import *
-from django.contrib import *
+from django.contrib import messages
 from .forms import *
 from .models import *
 from .decorators import *
@@ -65,11 +65,12 @@ def createTask(request):
 @login_required(login_url='login')
 def deleteTask(request, tid):
     delete_task = TaskInfo.objects.get(id=tid)
+    item = delete_task.task
     if request.method == 'POST':
         delete_task.delete()
         return redirect('home')
 
-    context = {'task': delete_task}
+    context = {'task': delete_task, 'item': item}
     return render(request, 'main/delete.html', context)
 
 

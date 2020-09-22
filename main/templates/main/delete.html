@@ -1,8 +1,21 @@
 {% extends 'main/index.html' %}{% load static %}{% block content %}
-<h2 class="heading">Delete</h2>
-<form action="" method="post">
-    {% csrf_token %}
-    <a href="{% url 'home'%}">Cancel</a>
-    <input type="submit" name="submit">
-</form>
+<div id="delete">
+    <h2 class="heading">Delete</h2>
+    <div class="col-md-8 mx-auto">
+        <div class="card card-body bg-secondary">
+            <form action="" method="post">
+                {% csrf_token %}
+                <div class="row mx-auto my-2">
+                    <p class="deleteWarning">Do you want to delete {{item}}?
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"><a class="btn-info btn btn-block my-2" href="{% url 'home'%}">Cancel</a></div>
+                    <div class="col-md-6"><input class="btn-danger btn btn-block my-2" type="submit" name="submit">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}

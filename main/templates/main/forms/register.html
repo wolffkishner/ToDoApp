@@ -6,8 +6,14 @@
             <form action="" method="post">{% csrf_token %}
                 <div class="gy-2">
                     {% render_field registerForm.email class="form-control my-4" placeholder="Email" %}
-                    {% render_field registerForm.first_name class="form-control my-4" placeholder="First Name" %}
-                    {% render_field registerForm.last_name class="form-control my-4" placeholder="Last Name" %}
+                    <div class="row">
+                        <div class="col-md-6">
+                            {% render_field registerForm.first_name class="form-control" placeholder="First Name" %}
+                        </div>
+                        <div class="col-md-6">
+                            {% render_field registerForm.last_name class="form-control" placeholder="Last Name" %}
+                        </div>
+                    </div>
                     {% render_field registerForm.username class="form-control my-4" placeholder="Username" %}
                     {% render_field registerForm.password1 class="form-control my-4" placeholder="Password" %}
                     {% render_field registerForm.password2 class="form-control my-4" placeholder="Confirm Password" %}
