@@ -22,11 +22,14 @@
         </div>
         </form>
         <span class="col-md-8 mx-auto" class="loginRegisterInterlink">
-            <p class="mx-auto loginRegisterInterlink">Part of the family?<a href="{% url 'login' %}" class="primary">
-                    Login Now</a>
-            </p>
+            <p class="mx-auto loginRegisterInterlink">Part of the family?<a href="{% url 'login' %}"
+                    class="primary">Login Now</a></p>
         </span>
+        <div class="alert alert-warning mx-auto rounded-md" role="alert">
+            <span class="text-capitalize">{{registerForm.errors}}</span>
+        </div>
     </div>
 </div>
+
 </div>
 {% endblock %}

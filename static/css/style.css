@@ -10,7 +10,7 @@
             font-family: 'Roboto';
             font-weight: 400;
         }
-        
+
         h1 {
             font-size: 50px;
         }
@@ -91,7 +91,7 @@
         #body {
             margin-left: 160px;
             /* Same as the width of the sidenav */
-            padding: 0px 10px;
+            padding: 0px 0px;
         }
 
         .loginPage {
@@ -109,7 +109,6 @@
 
         .registerPage {
             position: relative;
-            min-height: 95vh;
         }
 
         #registerForm .formHeading {
@@ -135,6 +134,10 @@
             text-align: center;
         }
 
+        .registerPageAlert {
+            border-radius: 11px;
+        }
+
         #delete .deleteWarning {
             position: relative;
             text-align: center;
@@ -147,9 +150,19 @@
             border-radius: 11px;
         }
 
-        @media screen and (max-height: 450px) {
+        @media (max-width:912px) {
             .sidenav {
-                padding-top: 15px;
+                width: 130px;
+            }
+
+            .sidenav a {
+                font-size: 20px !important;
+            }
+
+            #body {
+                margin-left: 130px;
+                /* Same as the width of the sidenav */
+                padding: 0px 0px;
             }
         }
 
@@ -181,7 +194,7 @@
             .sidenav {
                 display: block;
                 right: 0;
-                transition: 0.5s;
+                transition: 0.3s;
                 height: 100%;
                 width: 0px;
                 position: fixed;
@@ -191,6 +204,12 @@
                 background-color: #111;
                 overflow-x: hidden;
                 padding-top: 20px;
+            }
+
+            .sidenav a {
+                font-size: 25px !important;
+                padding-bottom: 20px !important;
+                border-bottom: 1px solid #ffffff1a;
             }
 
             .navToggle {
@@ -231,7 +250,7 @@
             }
 
             .table {
-                overflow-x: auto;
+                padding: 0px 0px !important;
             }
 
             .table .hideOnTab {
@@ -240,18 +259,35 @@
 
             #body {
                 margin-left: 0px !important;
-                margin: 0px 4px !important;
+                margin: 0px 0px !important;
                 /* Same as the width of the sidenav */
                 padding: 0px 0px !important;
             }
 
+            #createTaskPage {
+                margin: 0px 5px;
+            }
+
             .ui-datepicker {
                 width: 15em !important;
+            }
+
+        }
+
+        @media (min-width:768px) {
+            .showOnTab {
+                display: none !important;
             }
         }
 
         @media (max-width: 496px) {
             .table .hideOnMobile {
                 display: none;
+            }
+        }
+
+        @media (max-width:352px) {
+            .hideOnXSmall {
+                display: none !important;
             }
         }

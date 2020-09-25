@@ -17,3 +17,4 @@ class TaskInfo(models.Model):
     importance = models.CharField(
         max_length=255, null=True, blank=True, choices=IMPORTANCE)
     date_created = models.DateTimeField(auto_now_add=True, null=True)
+    completed = models.BooleanField(max_length=255, null=True, blank=True)

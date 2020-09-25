@@ -1,24 +1,30 @@
-<table class="table table-hover">
-    <thead>
-        <tr>
-            <th scope="col">Task Name</th>
-            <th scope="col">Task Deadline</th>
-            <th class="hideOnMobile" scope="col">Task Notes</th>
-            <th scope="col">Importance</th>
-            <th class="hideOnTab" scope="col"></th>
-            <th scope="col" class="hideOnMobile"></th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for i in taskInfo %}
-        <tr>
-            <td>{{i.task}}</td>
-            <td>{{i.deadline}}</td>
-            <td class="hideOnMobile">{{i.notes}}</td>
-            <td>{{i.importance}}</td>
-            <td class="hideOnTab"><a class="btn btn-primary btn-sm" href="task/delete/{{i.id}}/">Delete</a></td>
-            <td class="hideOnMobile"><a class="btn btn-success btn-sm" href="#">Completed</a></td>
-        </tr>
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Task Name</th>
+                <th class="hideOnXSmall" scope="col">Task Deadline</th>
+                <th class="hideOnXSmall" scope="col">Task Notes</th>
+                <th scope="col">Importance</th>
+                <th class="hideOnXSmall" scope="col">Completed</th>
+                <th class="hideOnXSmall" scope="col"></th>
+                <th class="hideOnXSmall" scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in taskInfo %}
+            <tr>
+                <td>{{i.task}}</td>
+                <td class="hideOnXSmall">{{i.deadline}}</td>
+                <td class="hideOnXSmall">{{i.notes}}</td>
+                <td>{{i.importance}}</td>
+                <td class="hideOnXSmall">{{i.completed}}</td>
+                <td class="hideOnXSmall"><a class="btn btn-primary btn-sm" href="task/delete/{{i.id}}/">Delete</a></td>
+                <td class="hideOnXSmall"><a href="#" class="btn btn-sm btn-success">Completed</a></td>
+            </tr>
+
+
+        </tbody>
         {% endfor %}
-    </tbody>
-</table>
+    </table>
+</div>

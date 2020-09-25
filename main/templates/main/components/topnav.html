@@ -1,0 +1,11 @@
+{% if user.is_authenticated %}
+<!-- top navbar -->
+<nav style="padding: 5px 0px;" class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+        <span style="font-family: 'Montserrat'; font-weight: 800;" class="navbar-brand text-capitalize ml-md-auto">
+            Hello, {{request.user}}
+        </span>
+    </div>
+</nav>
+<!-- end top navbar -->
+{% endif %}

@@ -1,5 +1,6 @@
 {% extends 'main/index.html' %}{% load widget_tweaks %}{% block content %}
-<h1 class="heading py-3">Create Task</h1>
+<div id="createTaskPage">
+    <h1 class="heading py-3">Create Task</h1>
     <div class="col-md-8 mx-auto">
         <form action="" method="post"> {% csrf_token %}
             {% render_field createTaskForm.task class="form-control my-3" placeholder="Task" %}
@@ -11,4 +12,5 @@
             </div>
         </form>
     </div>
-    {% endblock %}
+</div>
+{% endblock %}
